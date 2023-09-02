@@ -1,6 +1,6 @@
 type Iprops = {
   name: string;
-  messageCount: number;
+  messageCount?: number;
   isloggedIn: boolean;
 };
 
