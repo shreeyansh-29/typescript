@@ -2,3 +2,7 @@ Why Typescript + React?
 1. With static type checking, you get to learn about potential bugs as you're typing the code, than heading to the browser and figuring out at runtime.
 2. Provides a way to describe the shape of an object hence providing better documentation and autocomplete.
 3. Makes maintaince and refactoring of large code bases much easier.
+
+
+Use types when building applications.
+Use interfaces when building libraries.
