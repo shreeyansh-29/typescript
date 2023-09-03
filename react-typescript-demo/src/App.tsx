@@ -15,6 +15,7 @@ import Box from "./components/context/Box";
 import { ThemeContextProvider } from "./components/context/ThemeContext";
 import User from "./components/context/User";
 import { UserContextProvider } from "./components/context/UserContext";
+import { CustomButton } from "./components/html/Button";
 // import { List } from "./generics/List";
 
 function App() {
@@ -67,7 +68,8 @@ function App() {
       />
       <List items={[1, 2, 3]} onClick={(item) => console.log(item)} /> */}
       {/* <List items={nameList} onClick={(item) => console.log(item)} /> */}
-      <Toast position="left-center" />
+      {/* <Toast position="left-center" /> */}
+      <CustomButton variant="primary">Primary Button</CustomButton>
     </div>
   );
 }
