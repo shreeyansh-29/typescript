@@ -8,10 +8,13 @@ import Oscar from "./components/Oscar";
 import { Person } from "./components/Person";
 import PersonList from "./components/PersonList";
 import Status from "./components/Status";
+import { Private } from "./components/auth/Private";
+import Profile from "./components/auth/Profile";
 import Box from "./components/context/Box";
 import { ThemeContextProvider } from "./components/context/ThemeContext";
 import User from "./components/context/User";
 import { UserContextProvider } from "./components/context/UserContext";
+import { List } from "./generics/List";
 
 function App() {
   const personName = {
@@ -20,17 +23,16 @@ function App() {
   };
 
   const nameList = [
-    {
-      first: "Tim",
-      last: "Paine",
-    },
+    { id: 1, first: "Tim", last: "Paine" },
     {
       first: "Michael",
       last: "Clark",
+      id: 2,
     },
     {
       first: "Jim",
       last: "Beam",
+      id: 3,
     },
   ];
 
@@ -54,9 +56,16 @@ function App() {
       {/* <ThemeContextProvider>
         <Box  />
       </ThemeContextProvider> */}
-      <UserContextProvider>
+      {/* <UserContextProvider>
         <User />
-      </UserContextProvider>
+      </UserContextProvider> */}
+      {/* <Private isLoggedIn={true} component={Profile} /> */}
+      {/* <List
+        items={["Batman", "Superman", "Spiderman"]}
+        onClick={(item) => console.log(item)}
+      />
+      <List items={[1, 2, 3]} onClick={(item) => console.log(item)} /> */}
+      <List items={nameList} onClick={(item) => console.log(item)} />
     </div>
   );
 }
