@@ -16,6 +16,7 @@ import { ThemeContextProvider } from "./components/context/ThemeContext";
 import User from "./components/context/User";
 import { UserContextProvider } from "./components/context/UserContext";
 import { CustomButton } from "./components/html/Button";
+import { Text } from "./components/polymorphic/Text";
 // import { List } from "./generics/List";
 
 function App() {
@@ -69,7 +70,16 @@ function App() {
       <List items={[1, 2, 3]} onClick={(item) => console.log(item)} /> */}
       {/* <List items={nameList} onClick={(item) => console.log(item)} /> */}
       {/* <Toast position="left-center" /> */}
-      <CustomButton variant="primary">Primary Button</CustomButton>
+      {/* <CustomButton variant="primary">Primary Button</CustomButton> */}
+      <Text as="h1" size="lg">
+        Heading
+      </Text>
+      <Text as="p" size="md">
+        Paragraph
+      </Text>
+      <Text as="label" htmlFor="some-id" size="sm" color="secondary">
+        Label
+      </Text>
     </div>
   );
 }
